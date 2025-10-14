@@ -6,9 +6,13 @@ using Test
     # Define symbolic variables and equation
     @vars t x
     u = sin(x) * exp(-t)
-    du_dt = Varis.Core.time_derivative(u, t)
+    calculated = Varis.Core.time_derivative(u, t)
+    expected = -sin(x) * exp(-t)
 
     # Test that the time derivative is symbolically equal 
-    @test Varis.Core.symbolically_equal(du_dt, -sin(x) * exp(-t))
+    @test Varis.Core.symbolically_equal(calculated, expected)
+
+    # Test that the time derivative is numerically equal
+    @test Varis.Core.numerically_equal(calculated, expected)
   end
 end
