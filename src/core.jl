@@ -13,12 +13,12 @@ function symbolically_equal(expr1, expr2)
 end
 
 export numerically_equal
-function numerically_equal(expr1, expr2; vars=Dict(), atol=1e-8)
+function numerically_equal(expr1, expr2; vars = Dict(), atol = 1e-8)
     args = collect(keys(vars))
     vals = collect(values(vars))
-    f1 = Symbolics.build_function(expr1, args...; expression=false) |> eval
-    f2 = Symbolics.build_function(expr2, args...; expression=false) |> eval
-    return isapprox(f1(vals...), f2(vals...), atol=atol)
+    f1 = Symbolics.build_function(expr1, args...; expression = false) |> eval
+    f2 = Symbolics.build_function(expr2, args...; expression = false) |> eval
+    return isapprox(f1(vals...), f2(vals...), atol = atol)
 end
 
 end
