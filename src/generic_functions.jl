@@ -4,8 +4,6 @@ using Symbolics
 
 export diffusion
 
-function diffusion()
-    return 0
-end
+diffusion() = 0
 
 end

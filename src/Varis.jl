@@ -11,7 +11,7 @@ using .GenericFunctions
 using Symbolics
 export @vars
 macro vars(args...)
-    esc(:(Varis.Symbolics.@variables($(args...))))
+  return esc(:(Varis.Symbolics.@variables($(args...))))
 end
 
 end
