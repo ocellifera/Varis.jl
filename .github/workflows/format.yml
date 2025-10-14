@@ -27,5 +27,5 @@ jobs:
       - name: Julia format check
         uses: julia-actions/julia-format@v4
         with:
-          version: '1'
+          version: '2.1.6'
           suggestion-label: 'format-suggest'
