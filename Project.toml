@@ -4,11 +4,9 @@ version = "1.0.0-DEV"
 authors = ["landinjm"]
 
 [deps]
-JuliaFormatter = "98e50ef6-434e-11e9-1051-2b60c6c9e899"
 Symbolics = "0c5d862f-8b57-4792-8d23-62f2024744c7"
 
 [compat]
-JuliaFormatter = "2.1.6"
 Symbolics = "6.55.0"
 julia = "1.6.7"
 
