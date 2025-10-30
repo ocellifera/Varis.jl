@@ -83,7 +83,10 @@ function symbolically_equal(expr1::Matrix{Symbolics.Num}, expr2::Matrix{<:Real})
 
   return true
 end
-function symbolically_equal(expr1::Matrix{Symbolics.Num}, expr2::Matrix{<:Integer})
+function symbolically_equal(
+  expr1::Matrix{Symbolics.Num},
+  expr2::Matrix{<:Integer},
+)
   if size(expr1) != size(expr2)
     return false
   end

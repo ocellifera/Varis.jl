@@ -2,7 +2,7 @@ using Varis
 using Test
 
 @testset "Varis.jl" begin
-  @testset "Simple time derivative" begin
+  @testset "Simple scalar time derivative" begin
     # Define symbolic variables and equation
     @vars t x
     u = sin(x) * exp(-t)
@@ -16,7 +16,7 @@ using Test
     @test Varis.Core.numerically_equal(calculated, expected)
   end
 
-  @testset "Simple spatial gradient 1D" begin
+  @testset "Simple scalar spatial gradient 1D" begin
     # Define symbolic variables and equation
     @vars x u(x)
     u = x^2
@@ -27,7 +27,7 @@ using Test
     @test Varis.Core.symbolically_equal(calculated, expected)
   end
 
-  @testset "Simple spatial gradient 2D" begin
+  @testset "Simple scalar spatial gradient 2D" begin
     # Define symbolic variables and equation
     @vars x y u(x, y)
     u = x^2 + y^2
@@ -38,7 +38,7 @@ using Test
     @test Varis.Core.symbolically_equal(calculated, expected)
   end
 
-  @testset "Simple spatial gradient 3D" begin
+  @testset "Simple scalar spatial gradient 3D" begin
     # Define symbolic variables and equation
     @vars x y z u(x, y, z)
     u = x^2 + y^2 + z^2
@@ -49,7 +49,7 @@ using Test
     @test Varis.Core.symbolically_equal(calculated, expected)
   end
 
-  @testset "Simple spatial hessian 1D" begin
+  @testset "Simple scalar spatial hessian 1D" begin
     # Define symbolic variables and equation
     @vars x u(x)
     u = x^2
@@ -60,7 +60,7 @@ using Test
     @test Varis.Core.symbolically_equal(calculated, expected)
   end
 
-  @testset "Simple spatial hessian 2D" begin
+  @testset "Simple scalar spatial hessian 2D" begin
     # Define symbolic variables and equation
     @vars x y u(x, y)
     u = x^2 + y^2
@@ -71,7 +71,7 @@ using Test
     @test Varis.Core.symbolically_equal(calculated, expected)
   end
 
-  @testset "Simple spatial hessian 3D" begin
+  @testset "Simple scalar spatial hessian 3D" begin
     # Define symbolic variables and equation
     @vars x y z u(x, y, z)
     u = x^2 + y^2 + z^2
